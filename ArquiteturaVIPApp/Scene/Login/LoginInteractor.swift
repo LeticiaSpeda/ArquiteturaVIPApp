@@ -13,7 +13,7 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore {
   // MARK: Do something
   func doSomething(request: Login.Something.Request) {
     worker = LoginWorker()
-    worker?.doSomeWork()
+    worker?.loginUser()
     
     let response = Login.Something.Response()
     presenter?.presentSomething(response: response)
