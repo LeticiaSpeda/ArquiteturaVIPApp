@@ -24,6 +24,7 @@ final class LoginView: UIView, ViewCode {
         textField.backgroundColor = .white
         textField.font = .systemFont(ofSize: 12, weight: .semibold)
         textField.layer.cornerRadius = 10
+        textField.autocapitalizationType = .none
         textField.enableViewCode()
         return textField
     }()
@@ -46,6 +47,8 @@ final class LoginView: UIView, ViewCode {
         textField.backgroundColor = .white
         textField.font = .systemFont(ofSize: 12, weight: .semibold)
         textField.layer.cornerRadius = 10
+        textField.autocapitalizationType = .none
+        textField.isSecureTextEntry = true
         textField.isSecureTextEntry = true
         textField.enableViewCode()
         return textField
