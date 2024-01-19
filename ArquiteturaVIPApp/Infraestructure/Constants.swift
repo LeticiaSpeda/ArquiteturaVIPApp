@@ -1,8 +1,8 @@
-//
-//  Constants.swift
-//  ArquiteturaVIPApp
-//
-//  Created by Leticia Speda on 19/01/24.
-//
-
 import Foundation
+
+struct Constants {
+    struct ParametersKeys {
+        static let body = "body"
+        static let userModel = "usermModel"
+    }
+}
