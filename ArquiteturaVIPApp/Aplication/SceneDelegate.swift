@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  ArquiteturaVIPApp
-//
-//  Created by Leticia Speda on 18/01/24.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -17,7 +10,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = .init(windowScene: windowScene)
-        window?.rootViewController = ViewController()
+        let controller = UINavigationController(rootViewController: LoginViewController())
+        controller.navigationBar.prefersLargeTitles = true
+        window?.rootViewController = controller
         window?.makeKeyAndVisible()
     }
 
