@@ -1,8 +1,20 @@
-//
-//  ViewCode.swift
-//  ArquiteturaVIPApp
-//
-//  Created by Leticia Speda on 18/01/24.
-//
+protocol ViewCode {
+    func commonInit()
+    func setupHierarchy()
+    func setupConstraints()
+    func setupActions()
+    func setupStyle()
+}
 
-import Foundation
+extension ViewCode {
+    func commonInit() {
+        setupHierarchy()
+        setupConstraints()
+        setupActions()
+        setupStyle()
+    }
+    func setupHierarchy() {}
+    func setupConstraints() {}
+    func setupActions() {}
+    func setupStyle() {}
+}
