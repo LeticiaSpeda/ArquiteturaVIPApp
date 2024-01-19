@@ -1,8 +1,6 @@
-//
-//  Usermodel.swift
-//  ArquiteturaVIPApp
-//
-//  Created by Leticia Speda on 19/01/24.
-//
-
 import Foundation
+
+struct UserModel: Codable {
+    var email: String = String()
+    var password: String = String()
+}
