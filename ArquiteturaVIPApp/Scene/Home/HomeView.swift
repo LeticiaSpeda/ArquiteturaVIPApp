@@ -34,4 +34,8 @@ final class HomeView: UIView, ViewCode {
             welcomeLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
+    
+    func setupStyle() {
+        backgroundColor = .systemMint
+    }
 }
