@@ -2,9 +2,11 @@ import UIKit
 
 protocol HomeDisplayLogic: AnyObject {
     func displaySomething(viewModel: Home.Something.ViewModel)
+    func displayError(error: Login.Something.ViewError)
 }
 
 final class HomeViewController: UIViewController, HomeDisplayLogic {
+    
     var interactor: HomeBusinessLogic?
     var router: (NSObjectProtocol & HomeRoutingLogic & HomeDataPassing)?
     
@@ -65,7 +67,13 @@ final class HomeViewController: UIViewController, HomeDisplayLogic {
         interactor?.doSomething(request: request)
     }
     
-    func displaySomething(viewModel: Home.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func displaySomething(viewModel: Home.Something.ViewModel) {}
+    
+    func displayError(error: Login.Something.ViewError) {
+        let errorMessage = error.error.localizedDescription
+        let alert = UIAlertController(title: "Erro", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default
+                                     ))
+        self.present(alert, animated: true)
     }
 }
