@@ -2,6 +2,7 @@ import UIKit
 
 protocol LoginDisplayLogic: AnyObject {
     func displaySomething(viewModel: Login.Something.ViewModel)
+    func displayError(error: Login.Something.ViewError)
 }
 
 class LoginViewController: UIViewController, LoginDisplayLogic, ViewCode {
@@ -12,6 +13,17 @@ class LoginViewController: UIViewController, LoginDisplayLogic, ViewCode {
     
     lazy var loginView: LoginView = {
         let view = LoginView(frame: .zero)
+        view.onEnterTap = { [weak self] userModel in
+            if let self {
+                self.loginTap(userModel: userModel)
+            }
+            
+            view.onRegisterTap = { [weak self] in
+                if let self {
+                    self.registerTap()
+                }
+            }
+        }
         return view
     }()
     
@@ -54,6 +66,14 @@ class LoginViewController: UIViewController, LoginDisplayLogic, ViewCode {
         }
     }
     
+    func displayError(error: Login.Something.ViewError) {
+        let errorMessage = error.error.localizedDescription
+        let alert = UIAlertController(title: "Erro", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default
+                                     ))
+        self.present(alert, animated: true)
+    }
+    
     // MARK: View lifecycle
     override func loadView() {
         super.loadView()
@@ -66,10 +86,17 @@ class LoginViewController: UIViewController, LoginDisplayLogic, ViewCode {
         doSomething()
     }
     
-    func doSomething() {
-        let request = Login.Something.Request()
+    func doSomething() {}
+    
+    func displaySomething(viewModel: Login.Something.ViewModel) {}
+    
+    func loginTap(userModel: UserModel) {
+        let request = Login.Something.Request(userModel: userModel)
         interactor?.doSomething(request: request)
     }
     
-    func displaySomething(viewModel: Login.Something.ViewModel) {}
+    func registerTap() {
+        router?.routeToRegister()
+    }
 }
+
