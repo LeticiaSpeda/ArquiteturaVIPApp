@@ -3,7 +3,7 @@ import UIKit
 final class LoginView: UIView, ViewCode {
     //MARK: - Closures
     var onRegisterTap: (() -> Void)?
-    var onEnterTap: (() -> Void)?
+    var onEnterTap: ((_ userModel: UserModel) -> Void)?
     
     //MARK: - Properts
     private lazy var emailLabel: UILabel = {
@@ -83,7 +83,11 @@ final class LoginView: UIView, ViewCode {
     
     //MARK: - Actions
     @objc func enterButtonTap() {
-        self.onEnterTap?()
+        if let email = emailTextField.text, let password = passwordTextField.text,
+           let userModel = UserModel(email: email, password: password) {
+            
+            self.onEnterTap?(userModel)
+        }
     }
     
     @objc func registerButtonTap() {
