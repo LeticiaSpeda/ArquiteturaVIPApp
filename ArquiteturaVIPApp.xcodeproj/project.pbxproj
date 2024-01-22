@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0DAEF272B5EB09200200720 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAEF212B5EB09200200720 /* RegisterPresenter.swift */; };
+		E0DAEF282B5EB09200200720 /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAEF222B5EB09200200720 /* RegisterWorker.swift */; };
+		E0DAEF292B5EB09200200720 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAEF232B5EB09200200720 /* RegisterRouter.swift */; };
+		E0DAEF2A2B5EB09200200720 /* RegisterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAEF242B5EB09200200720 /* RegisterModels.swift */; };
+		E0DAEF2B2B5EB09200200720 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAEF252B5EB09200200720 /* RegisterViewController.swift */; };
+		E0DAEF2C2B5EB09200200720 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAEF262B5EB09200200720 /* RegisterInteractor.swift */; };
 		F36315012B594396001C317F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36315002B594396001C317F /* AppDelegate.swift */; };
 		F36315032B594396001C317F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36315022B594396001C317F /* SceneDelegate.swift */; };
 		F363150A2B594397001C317F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36315092B594397001C317F /* Assets.xcassets */; };
@@ -64,6 +70,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0DAEF212B5EB09200200720 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		E0DAEF222B5EB09200200720 /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
+		E0DAEF232B5EB09200200720 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		E0DAEF242B5EB09200200720 /* RegisterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModels.swift; sourceTree = "<group>"; };
+		E0DAEF252B5EB09200200720 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E0DAEF262B5EB09200200720 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		F36314FD2B594396001C317F /* ArquiteturaVIPApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArquiteturaVIPApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36315002B594396001C317F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36315022B594396001C317F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +145,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0DAEF202B5EAF5F00200720 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				E0DAEF212B5EB09200200720 /* RegisterPresenter.swift */,
+				E0DAEF222B5EB09200200720 /* RegisterWorker.swift */,
+				E0DAEF232B5EB09200200720 /* RegisterRouter.swift */,
+				E0DAEF242B5EB09200200720 /* RegisterModels.swift */,
+				E0DAEF252B5EB09200200720 /* RegisterViewController.swift */,
+				E0DAEF262B5EB09200200720 /* RegisterInteractor.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		F36314F42B594396001C317F = {
 			isa = PBXGroup;
 			children = (
@@ -186,8 +211,8 @@
 		F36315162B59492A001C317F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				E0DAEF202B5EAF5F00200720 /* Register */,
 				F36315172B594957001C317F /* Login */,
-				F36315182B59495E001C317F /* Register */,
 				F36315192B594967001C317F /* Home */,
 			);
 			path = Scene;
@@ -205,13 +230,6 @@
 				F36315362B596323001C317F /* LoginInteractor.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		F36315182B59495E001C317F /* Register */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Register;
 			sourceTree = "<group>";
 		};
 		F36315192B594967001C317F /* Home */ = {
@@ -415,18 +433,24 @@
 				F36315292B594F8C001C317F /* HomeView.swift in Sources */,
 				F36315262B594EE3001C317F /* HomeViewController.swift in Sources */,
 				F39B48852B5AC0AD006D072C /* Constants.swift in Sources */,
+				E0DAEF272B5EB09200200720 /* RegisterPresenter.swift in Sources */,
 				F39B48472B5ABE26006D072C /* UserModel.swift in Sources */,
+				E0DAEF282B5EB09200200720 /* RegisterWorker.swift in Sources */,
 				F36315032B594396001C317F /* SceneDelegate.swift in Sources */,
+				E0DAEF292B5EB09200200720 /* RegisterRouter.swift in Sources */,
+				E0DAEF2C2B5EB09200200720 /* RegisterInteractor.swift in Sources */,
 				F36315232B594EE3001C317F /* HomeWorker.swift in Sources */,
 				F36315272B594EE3001C317F /* HomeInteractor.swift in Sources */,
 				F363153C2B596323001C317F /* LoginInteractor.swift in Sources */,
 				F36315392B596323001C317F /* LoginRouter.swift in Sources */,
 				F363153A2B596323001C317F /* LoginModels.swift in Sources */,
 				F36315372B596323001C317F /* LoginPresenter.swift in Sources */,
+				E0DAEF2A2B5EB09200200720 /* RegisterModels.swift in Sources */,
 				F36315382B596323001C317F /* LoginWorker.swift in Sources */,
 				F363152C2B595CAF001C317F /* UIView+Extensions.swift in Sources */,
 				F363153B2B596323001C317F /* LoginViewController.swift in Sources */,
 				F36315222B594EE3001C317F /* HomePresenter.swift in Sources */,
+				E0DAEF2B2B5EB09200200720 /* RegisterViewController.swift in Sources */,
 				F363153E2B596333001C317F /* LoginView.swift in Sources */,
 				F36315252B594EE3001C317F /* HomeModels.swift in Sources */,
 				F39B48452B5ABE0D006D072C /* UserManager.swift in Sources */,
