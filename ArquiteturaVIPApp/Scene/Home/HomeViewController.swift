@@ -2,7 +2,6 @@ import UIKit
 
 protocol HomeDisplayLogic: AnyObject {
     func displaySomething(viewModel: Home.Something.ViewModel)
-    func displayError(error: Login.Something.ViewError)
 }
 
 final class HomeViewController: UIViewController, HomeDisplayLogic {
@@ -68,12 +67,4 @@ final class HomeViewController: UIViewController, HomeDisplayLogic {
     }
     
     func displaySomething(viewModel: Home.Something.ViewModel) {}
-    
-    func displayError(error: Login.Something.ViewError) {
-        let errorMessage = error.error.localizedDescription
-        let alert = UIAlertController(title: "Erro", message: errorMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "ok", style: .default
-                                     ))
-        self.present(alert, animated: true)
-    }
 }
