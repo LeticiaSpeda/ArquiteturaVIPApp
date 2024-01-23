@@ -83,8 +83,8 @@ final class LoginView: UIView, ViewCode {
     
     //MARK: - Actions
     @objc func enterButtonTap() {
-        if let email = emailTextField.text, let password = passwordTextField.text,
-           let userModel = UserModel(email: email, password: password) {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            let userModel = UserModel(email: email, password: password)
             
             self.onEnterTap?(userModel)
         }
