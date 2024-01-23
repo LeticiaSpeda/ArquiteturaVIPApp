@@ -21,8 +21,9 @@ class LoginInteractor: LoginBusinessLogic, LoginDataStore {
           }
           
       }, failureHandler: { [weak self] error in
-          if let self, let error = error, let viewError = Login.Something.ViewError(error: error) {
-              self.presenter?.presentError(error: error)
+          if let self, let error = error {
+              let viewError = Login.Something.ViewError(error: error) 
+              self.presenter?.presentError(error: viewError)
               }
           }
                         
