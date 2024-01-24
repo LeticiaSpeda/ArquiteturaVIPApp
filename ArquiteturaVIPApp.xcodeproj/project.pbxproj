@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0542D3B2B61772E009F6725 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0542D3A2B61772E009F6725 /* RegisterView.swift */; };
 		E0DAEF272B5EB09200200720 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAEF212B5EB09200200720 /* RegisterPresenter.swift */; };
 		E0DAEF282B5EB09200200720 /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAEF222B5EB09200200720 /* RegisterWorker.swift */; };
 		E0DAEF292B5EB09200200720 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DAEF232B5EB09200200720 /* RegisterRouter.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0542D3A2B61772E009F6725 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		E0DAEF212B5EB09200200720 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		E0DAEF222B5EB09200200720 /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
 		E0DAEF232B5EB09200200720 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				E0DAEF242B5EB09200200720 /* RegisterModels.swift */,
 				E0DAEF252B5EB09200200720 /* RegisterViewController.swift */,
 				E0DAEF262B5EB09200200720 /* RegisterInteractor.swift */,
+				E0542D3A2B61772E009F6725 /* RegisterView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				F36315372B596323001C317F /* LoginPresenter.swift in Sources */,
 				E0DAEF2A2B5EB09200200720 /* RegisterModels.swift in Sources */,
 				F36315382B596323001C317F /* LoginWorker.swift in Sources */,
+				E0542D3B2B61772E009F6725 /* RegisterView.swift in Sources */,
 				F363152C2B595CAF001C317F /* UIView+Extensions.swift in Sources */,
 				F363153B2B596323001C317F /* LoginViewController.swift in Sources */,
 				F36315222B594EE3001C317F /* HomePresenter.swift in Sources */,

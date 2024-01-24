@@ -96,7 +96,7 @@ class LoginViewController: UIViewController, LoginDisplayLogic, ViewCode {
     }
     
     func registerTap() {
-        router?.routeToRegister()
+        router?.routeToHome()
     }
 }
 
