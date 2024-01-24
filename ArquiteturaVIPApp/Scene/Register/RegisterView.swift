@@ -1,6 +1,6 @@
 import UIKit
 
-final class RegisterView: UIView {
+final class RegisterView: UIView, ViewCode {
     
     //MARK: - Closures
     var onRegisterTap: ((_ email: String, _ passwdord: String) -> Void)?
@@ -57,15 +57,6 @@ final class RegisterView: UIView {
         return textField
     }()
     
-    private lazy var enterButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Entrar", for: .normal)
-        button.backgroundColor = .blue.withAlphaComponent(0.4)
-        button.enableViewCode()
-        button.addTarget(self, action: #selector(openButtonTap), for: .touchUpInside)
-        return button
-    }()
-    
     private lazy var registerButton: UIButton = {
         let button = UIButton()
         button.setTitle("Registrar", for: .normal)
@@ -100,7 +91,6 @@ final class RegisterView: UIView {
         addSubview(emailTextField)
         addSubview(passwordLabel)
         addSubview(passwordTextField)
-        addSubview(enterButton)
         addSubview(registerButton)
     }
     
@@ -110,7 +100,6 @@ final class RegisterView: UIView {
             setupEmailTextFieldConstraints() +
             setupPasswordLabelConstraints() +
             setupPasswordTextFieldConstraints() +
-            setupEnterButtonConstraints() +
             setupRegisterButtonConstraints()
         )
     }
@@ -184,27 +173,11 @@ final class RegisterView: UIView {
         ]
     }
     
-    private func setupEnterButtonConstraints() -> [NSLayoutConstraint] {
-        [
-            enterButton.topAnchor.constraint(
-                equalTo: passwordTextField.bottomAnchor,
-                constant: 40
-            ),
-            enterButton.leadingAnchor.constraint(
-                equalTo: safeAreaLayoutGuide.leadingAnchor,
-                constant: 10
-            ),
-            enterButton.trailingAnchor.constraint(
-                equalTo: safeAreaLayoutGuide.trailingAnchor,
-                constant: -10
-            )
-        ]
-    }
     
     private func setupRegisterButtonConstraints() -> [NSLayoutConstraint] {
         [
             registerButton.topAnchor.constraint(
-                equalTo: enterButton.bottomAnchor,
+                equalTo: passwordTextField.bottomAnchor,
                 constant: 10
             ),
             registerButton.leadingAnchor.constraint(
