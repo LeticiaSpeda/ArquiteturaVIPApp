@@ -3,7 +3,7 @@ import UIKit
 final class RegisterView: UIView, ViewCode {
     
     //MARK: - Closures
-    var onRegisterTap: ((_ email: String, _ passwdord: String) -> Void)?
+    var onRegisterTap: ((_ userModel: UserModel) -> Void)?
     
     //MARK: - Properts
     private lazy var emailLabel: UILabel = {
@@ -76,12 +76,11 @@ final class RegisterView: UIView, ViewCode {
     required init?(coder: NSCoder) { nil }
     
     //MARK: - Actions
-    @objc func openButtonTap() {}
-    
     @objc func registerButtonTap() {
         if let email = emailTextField.text, let password = passwordTextField.text {
             let userModel = UserModel(email: email, password: password)
-            self.onRegisterTap?(email, password)
+            
+            self.onRegisterTap?(userModel)
         }
     }
     
