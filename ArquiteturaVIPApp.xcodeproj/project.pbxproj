@@ -150,13 +150,13 @@
 		E0DAEF202B5EAF5F00200720 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				E0542D3A2B61772E009F6725 /* RegisterView.swift */,
+				E0DAEF252B5EB09200200720 /* RegisterViewController.swift */,
 				E0DAEF212B5EB09200200720 /* RegisterPresenter.swift */,
 				E0DAEF222B5EB09200200720 /* RegisterWorker.swift */,
 				E0DAEF232B5EB09200200720 /* RegisterRouter.swift */,
 				E0DAEF242B5EB09200200720 /* RegisterModels.swift */,
-				E0DAEF252B5EB09200200720 /* RegisterViewController.swift */,
 				E0DAEF262B5EB09200200720 /* RegisterInteractor.swift */,
-				E0542D3A2B61772E009F6725 /* RegisterView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";

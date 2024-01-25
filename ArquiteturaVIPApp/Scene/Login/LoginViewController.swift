@@ -88,7 +88,9 @@ class LoginViewController: UIViewController, LoginDisplayLogic, ViewCode {
     
     func doSomething() {}
     
-    func displaySomething(viewModel: Login.Something.ViewModel) {}
+    func displaySomething(viewModel: Login.Something.ViewModel) {
+        router?.routeToHome()
+    }
     
     func loginTap(userModel: UserModel) {
         let request = Login.Something.Request(userModel: userModel)
@@ -96,7 +98,6 @@ class LoginViewController: UIViewController, LoginDisplayLogic, ViewCode {
     }
     
     func registerTap() {
-        router?.routeToHome()
+        router?.routeToRegister()
     }
 }
-
