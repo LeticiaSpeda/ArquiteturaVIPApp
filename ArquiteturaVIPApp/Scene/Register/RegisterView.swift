@@ -177,7 +177,7 @@ final class RegisterView: UIView, ViewCode {
         [
             registerButton.topAnchor.constraint(
                 equalTo: passwordTextField.bottomAnchor,
-                constant: 10
+                constant: 36
             ),
             registerButton.leadingAnchor.constraint(
                 equalTo: safeAreaLayoutGuide.leadingAnchor,
