@@ -45,6 +45,11 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic {
     }
     
     // MARK: View lifecycle
+    override func loadView() {
+        super.loadView()
+        self.view = registerView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         doSomething()
