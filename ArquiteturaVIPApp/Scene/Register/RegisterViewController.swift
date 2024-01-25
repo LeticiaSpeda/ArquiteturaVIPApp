@@ -52,6 +52,7 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Registrar"
         doSomething()
     }
     
@@ -66,13 +67,13 @@ class RegisterViewController: UIViewController, RegisterDisplayLogic {
         }
         return view
     }()
-
-func doSomething() {
-    let request = Register.Something.Request()
-    interactor?.doSomething(request: request)
-}
-
-func displaySomething(viewModel: Register.Something.ViewModel) {}
-
-func registerTap(userModel: UserModel) {}
+    
+    func doSomething() {
+        let request = Register.Something.Request()
+        interactor?.doSomething(request: request)
+    }
+    
+    func displaySomething(viewModel: Register.Something.ViewModel) {}
+    
+    func registerTap(userModel: UserModel) {}
 }
